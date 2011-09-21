@@ -1,0 +1,30 @@
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class AbsolutoTest {
+
+	@Test
+		public void absolut(){
+	int resultado =	Absolute.absoluto(-1);
+	assertEquals(1, resultado );
+	}
+	
+}
+
+//-----------------------------------------------------------------
+
+
+
+
+
+public class Absolute {
+	public static int absoluto(int num) {
+		if( num < 0 ){
+			return num * (-1); 
+		}else{
+			return num;
+		}
+	}
+
+}

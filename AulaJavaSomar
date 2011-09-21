@@ -1,0 +1,65 @@
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class calculadoraTest {
+	
+	@Test
+	public void deveSomar(){
+		int [] valores = {1,2,6}; 
+		int resultado =	Calculadora.somar(valores);
+		assertEquals(9, resultado );
+	}
+	
+	@Test
+	public void deveMultiplicar(){
+		int [] valores = {5,3,4}; 
+		int resultado =	Calculadora.multiplicar(valores);
+		assertEquals(60, resultado );
+	}
+	
+	
+	@Test
+	public void deveDividir(){
+		int [] valores = {3,3,1}; 
+		int resultado =	Calculadora.dividir(valores);
+		assertEquals(1, resultado );
+	}
+}
+
+
+
+//-------------------------------------------------------------------------------------------
+
+
+
+public class Calculadora {
+
+	public static int somar(int[] valores) {
+		int somatorio = 0; 
+		
+		for(int i = 0; i < 3; i++){
+			somatorio = somatorio + valores [i];
+		}
+		return somatorio;
+	}
+
+	public static int multiplicar(int[] valores) {
+		int multiplicacao = 1; 
+		
+		for(int i = 0; i < 3; i++){
+			multiplicacao = multiplicacao * valores [i];
+		}
+		return multiplicacao;
+	}
+	
+	public static int dividir(int[] valores) {
+		int divizao = 1; 
+		
+		for(int i = 0; i < 3; ){
+			divizao = divizao / valores [i];
+		}
+		return divizao;
+	}
+
+}
